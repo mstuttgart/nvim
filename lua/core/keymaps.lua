@@ -55,8 +55,8 @@ set("i", "<C-k>", "<Up>", { desc = "Move up" })
 set("i", "<C-l>", "<Right>", { desc = "Move right" })
 
 -- split editor
-set("n", "<leader>wh", "<C-u>split<CR>", { desc = "Split horizontal" })
-set("n", "<leader>wv", "<C-u>vsplit<CR>", { desc = "Split vertical" })
+set("n", "<leader>uh", "<C-u>split<CR>", { desc = "Split horizontal" })
+set("n", "<leader>uv", "<C-u>vsplit<CR>", { desc = "Split vertical" })
 
 -- quit
 set("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
