@@ -24,8 +24,8 @@ set({ "n", "x" }, "\'", "ciw\'\'<esc>P", { desc = "Insert single quotes surround
 set({ "v", "x" }, "p", 'p:let @+=@0<CR>:let @"=@0<CR>', { desc = "Dont copy replaced text" })
 
 -- better indenting
-set("v", "<", "<gv")
-set("v", ">", ">gv")
+set({ "v" }, "<S-Tab>", "<gv", { desc = "Unindent line" })
+set({ "v" }, "<Tab>", ">gv", { desc = "Indent line" })
 
 -- from AstroNvim: https://github.com/AstroNvim/AstroNvim/blob/main/lua/astronvim/plugins/_astrocore_mappings.lua#L49
 set({ "n" }, "<leader>pi", function()
