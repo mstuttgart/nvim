@@ -44,6 +44,7 @@ local plugins = {
     vim.keymap.set("n", "<leader>sf", require("telescope.builtin").find_files, { desc = "Search Files" })
     vim.keymap.set("n", "<leader>sw", require("telescope.builtin").grep_string, { desc = "Search current Word" })
     vim.keymap.set("n", "<leader>sh", require("telescope.builtin").help_tags, { desc = "Search Help" })
+    vim.keymap.set("n", "<leader>sb", require("telescope.builtin").buffers, { desc = "Search Buffers" })
     vim.keymap.set(
       "n",
       "<leader>sg",
