@@ -61,10 +61,6 @@ local plugins = {
       capabilities = capabilities,
     }
 
-    -- configure yaml server
-    lspconfig["yaml"].setup {
-      capabilities = capabilities,
-    }
   end,
 }
 
