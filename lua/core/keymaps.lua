@@ -27,8 +27,26 @@ set({ "v", "x" }, "p", 'p:let @+=@0<CR>:let @"=@0<CR>', { desc = "Dont copy repl
 set("v", "<", "<gv")
 set("v", ">", ">gv")
 
--- lazy
-set("n", "<leader>L", "<cmd>:Lazy<cr>", { desc = "Lazy" })
+-- from AstroNvim: https://github.com/AstroNvim/AstroNvim/blob/main/lua/astronvim/plugins/_astrocore_mappings.lua#L49
+set({ "n" }, "<leader>pi", function()
+  require("lazy").install()
+end, { desc = "Plugins Install" })
+
+set({ "n" }, "<leader>ps", function()
+  require("lazy").home()
+end, { desc = "Plugins Status" })
+
+set({ "n" }, "<leader>pS", function()
+  require("lazy").sync()
+end, { desc = "Plugins Sync" })
+
+set({ "n" }, "<leader>pu", function()
+  require("lazy").check()
+end, { desc = "Plugins Check Updates" })
+
+set({ "n" }, "<leader>pU", function()
+  require("lazy").update()
+end, { desc = "Plugins Update" })
 
 -- navegate in insert <ctrl> hjkl keys
 set("i", "<C-h>", "<Left>", { desc = "Move left" })
