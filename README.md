@@ -7,14 +7,14 @@
 
 <p align="center">
 
-<a href="https://dotfyle.com/mstuttgart/dotfiles-config-nvim">
-<img src="https://dotfyle.com/mstuttgart/dotfiles-config-nvim/badges/plugins?style=for-the-badge" />
+<a href="https://dotfyle.com/mstuttgart/nvim">
+<img src="https://dotfyle.com/mstuttgart/nvim/badges/plugins?style=for-the-badge" />
 </a>
-<a href="https://dotfyle.com/mstuttgart/dotfiles-config-nvim">
- <img src="https://dotfyle.com/mstuttgart/dotfiles-config-nvim/badges/leaderkey?style=for-the-badge" />
+<a href="https://dotfyle.com/mstuttgart/nvim">
+ <img src="https://dotfyle.com/mstuttgart/nvim/badges/leaderkey?style=for-the-badge" />
 </a>
-<a href="https://dotfyle.com/mstuttgart/dotfiles-config-nvim">
- <img src="https://dotfyle.com/mstuttgart/dotfiles-config-nvim/badges/plugin-manager?style=for-the-badge" />
+<a href="https://dotfyle.com/mstuttgart/nvim">
+ <img src="https://dotfyle.com/mstuttgart/nvim/badges/plugin-manager?style=for-the-badge" />
 </a>
 
 </p>
