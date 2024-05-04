@@ -79,6 +79,8 @@ nvim
 
 The main features and plugins provided by this setup are as follows:
 
+WIP... 
+
 ## Credits
 
 Copyright (C) 2023-2024 by Michell Stuttgart
