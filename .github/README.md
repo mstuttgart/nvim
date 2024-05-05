@@ -33,6 +33,7 @@ Wekcome to my [Neovim](https://neovim.io/) configuration.
 
 I use this config. for my work as Full Stack Developer and for my hobby projects. Come with batteries included for Python, Javascript, Bash, Markdown, XML and YAML (Ansible).
 
+> [!NOTE]
 > The intention of this configuration was never to be a fully customizable "distribution" like NvChad, LazyVim, etc. Use it for your inspiration
 
 ![Screenshot from 2024-05-04 14-21-42](https://github.com/mstuttgart/nvim/assets/8174740/51b6059b-cdf9-4478-b5f9-6340f3b847bb)
@@ -40,6 +41,7 @@ I use this config. for my work as Full Stack Developer and for my hobby projects
 
 ## Requirements
 
+> [!CAUTION]
  > Install requires Neovim 0.9+. Always review the code before installing a configuration.
 
 - [Nerd Fonts](https://www.nerdfonts.com/) (v3.0 or greater).
