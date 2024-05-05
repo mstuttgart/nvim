@@ -41,8 +41,11 @@ I use this config. for my work as Full Stack Developer and for my hobby projects
 
 ## Requirements
 
+> [!NOTE]
+> Install requires Neovim 0.9+. 
+
 > [!CAUTION]
- > Install requires Neovim 0.9+. Always review the code before installing a configuration.
+> Always review the code before installing a configuration.
 
 - [Nerd Fonts](https://www.nerdfonts.com/) (v3.0 or greater).
 - [Git](https://git-scm.com/) - to install nvim plugins with [lazy.nvim](https://github.com/folke/lazy.nvim).
