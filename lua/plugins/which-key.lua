@@ -15,7 +15,6 @@ local plugin = {
       ["<leader>d"] = { name = "+diagnostics/quickfix" },
       ["<leader>e"] = { name = "+nvimtree" },
       ["<leader>g"] = { name = "+git" },
-      ["<leader>p"] = { name = "+plugins"},
       ["<leader>s"] = { name = "+search" },
       ["<leader>u"] = { name = "+ui" },
     },
