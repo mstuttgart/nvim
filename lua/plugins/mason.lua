@@ -28,6 +28,7 @@ local plugins = {
         "pyright",
         "typescript-language-server",
         "lemminx",
+        "taplo",
         "yaml-language-server",
 
         -- linters
@@ -45,6 +46,7 @@ local plugins = {
         "shfmt",
         "stylua",
         "yamlfmt",
+        "taplo",
       },
 
       -- auto-install configured servers (with lspconfig)

@@ -21,6 +21,7 @@ local plugin = {
         lua = { "stylua" },
         markdown = { "markdownlint" },
         python = { "isort", "black" },
+        toml = { "taplo" },
         typescript = { "prettier" },
         typescriptreact = { "prettier" },
         xml = { "xmlformat" },

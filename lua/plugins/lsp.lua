@@ -61,6 +61,10 @@ local plugins = {
       capabilities = capabilities,
     }
 
+    lspconfig["taplo"].setup {
+      capabilities = capabilities,
+    }
+
   end,
 }
 
