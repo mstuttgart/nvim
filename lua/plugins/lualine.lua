@@ -35,9 +35,6 @@ local plugin = {
             },
           },
           {
-            require("auto-session.lib").current_session_name,
-          },
-          {
             "filename",
             path = 1,
             symbols = { modified = "  ", readonly = "", unnamed = "" },
@@ -60,6 +57,8 @@ local plugin = {
               return package.loaded["noice"] and require("noice").api.status.mode.has()
             end,
           },
+          { "encoding" },
+          { "fileformat" },
           {
             "diff",
             symbols = {
