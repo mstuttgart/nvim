@@ -32,11 +32,12 @@ local plugins = {
         "yaml-language-server",
 
         -- linters
+        "ansible-lint",
         "eslint_d",
         "markdownlint",
-        "pylint",
+        "prettier",
+        "ruff",
         "shellcheck",
-        "ansible-lint",
         "yamllint",
 
         -- formatters
