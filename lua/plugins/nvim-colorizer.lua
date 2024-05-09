@@ -1,6 +1,6 @@
 -- A high-performance color highlighter
 local plugin = {
-  "norcalli/nvim-colorizer.lua",
+  "NvChad/nvim-colorizer.lua",
   event = "VeryLazy",
   config = function()
     require("colorizer").setup({ "css", "javascript", "lua", "vim", "toml", "svelte", "typescript", "conf" }, {
