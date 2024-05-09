@@ -22,6 +22,8 @@ local plugins = {
         "ansible-language-server",
         "bash-language-server",
         "css-lsp",
+        "docker-compose-language-service",
+        "dockerfile-language-server",
         "html-lsp",
         "lua-language-server",
         "marksman",
@@ -36,7 +38,8 @@ local plugins = {
         "eslint_d",
         "markdownlint",
         "prettier",
-        "ruff",
+        "hadolint", -- dockerfile lint
+        "ruff", -- python lint
         "shellcheck",
         "yamllint",
 
