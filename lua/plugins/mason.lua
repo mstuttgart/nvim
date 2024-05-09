@@ -25,12 +25,12 @@ local plugins = {
         "docker-compose-language-service",
         "dockerfile-language-server",
         "html-lsp",
+        "lemminx",
         "lua-language-server",
         "marksman",
         "pyright",
-        "typescript-language-server",
-        "lemminx",
         "taplo",
+        "typescript-language-server",
         "yaml-language-server",
 
         -- linters
