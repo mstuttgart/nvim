@@ -56,6 +56,20 @@ local plugin = {
         },
       },
     }
+
+    vim.filetype.add {
+      filename = {
+        [".env"] = "dotenv",
+        ["vifmrc"] = "vim",
+      },
+      pattern = {
+        [".*/polybar/config"] = "dosini",
+        [".*/i3/config"] = "dosini",
+        [".*/kitty/.+%.conf"] = "bash",
+        [".*.tmux.+%.conf"] = "bash",
+        ["%.env%.[%w_.-]+"] = "dotenv",
+      },
+    }
   end,
 }
 
