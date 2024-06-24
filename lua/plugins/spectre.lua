@@ -5,7 +5,7 @@ local plugin = {
   },
   event = "VeryLazy",
   keys = {
-    { "<leader>cs", '<cmd>lua require("spectre").toggle()<CR>', desc = "Toggle Spectre" },
+    { "<leader>sS", '<cmd>lua require("spectre").toggle()<CR>', desc = "Toggle Spectre" },
   },
   config = function()
     require("spectre").setup()

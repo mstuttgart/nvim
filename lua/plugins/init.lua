@@ -15,12 +15,6 @@ local plugins = {
     end,
   },
 
-  -- A fancy, configurable, notification manager for NeoVim
-  {
-    "rcarriga/nvim-notify",
-    event = "VeryLazy",
-  },
-
   -- Neovim plugin to improve the default vim.ui interfaces
   {
     "stevearc/dressing.nvim",

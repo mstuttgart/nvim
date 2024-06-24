@@ -16,6 +16,9 @@ local opts = {
     -- have outdated releases, which may break your Neovim install.
     version = false, -- always use the latest git commit
   },
+  change_detection = {
+    notify = false,
+  },
   performance = {
     rtp = {
       disabled_plugins = {
@@ -50,7 +53,7 @@ local opts = {
     },
   },
   checker = {
-    enabled = true,
+    enabled = false,
   },
   debug = false,
 }

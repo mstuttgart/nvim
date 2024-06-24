@@ -4,4 +4,5 @@ require "core.keymaps"
 require "core.autocommands"
 require "core.lazy"
 
-require("theme")
+vim.cmd "colorscheme everforest"
+

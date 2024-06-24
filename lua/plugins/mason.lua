@@ -20,6 +20,7 @@ local plugins = {
       ensure_installed = {
         -- lsp
         "ansible-language-server",
+        "astro-language-server",
         "bash-language-server",
         "css-lsp",
         "docker-compose-language-service",
@@ -31,6 +32,7 @@ local plugins = {
         "pyright",
         "taplo",
         "typescript-language-server",
+        "vue-language-server",
         "yaml-language-server",
 
         -- linters

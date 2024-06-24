@@ -1,7 +1,7 @@
 -- configure LSP
 local plugins = {
   "neovim/nvim-lspconfig",
-  event = { "BufReadPre", "BufNewFile" },
+  event = "VeryLazy",
   dependencies = {
     "WhoIsSethDaniel/mason-tool-installer.nvim",
     "hrsh7th/cmp-nvim-lsp",
@@ -70,6 +70,14 @@ local plugins = {
     }
 
     lspconfig["docker_compose_language_service"].setup {
+      capabilities = capabilities,
+    }
+
+    lspconfig["vuels"].setup {
+      capabilities = capabilities,
+    }
+
+    lspconfig["astro"].setup {
       capabilities = capabilities,
     }
   end,

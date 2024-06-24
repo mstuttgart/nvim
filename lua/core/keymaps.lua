@@ -30,8 +30,8 @@ set({ "v" }, "{", "di{}<esc>P", { desc = "Insert {} surround word" })
 set({ "v", "x" }, "p", 'p:let @+=@0<CR>:let @"=@0<CR>', { desc = "Dont copy replaced text" })
 
 -- better indenting
-set({ "v" }, "<S-Tab>", "<gv", { desc = "Unindent line" })
-set({ "v" }, "<Tab>", ">gv", { desc = "Indent line" })
+set({ "v" }, "<", "<gv", { desc = "Unindent line" })
+set({ "v" }, ">", ">gv", { desc = "Indent line" })
 
 -- Managers commands
 set({ "n" }, "<leader>M", "<cmd>Mason<CR>", { desc = "Mason" })
@@ -47,5 +47,42 @@ set("i", "<C-l>", "<Right>", { desc = "Move right" })
 set("n", "<leader>uh", "<C-u>split<CR>", { desc = "Split horizontal" })
 set("n", "<leader>uv", "<C-u>vsplit<CR>", { desc = "Split vertical" })
 
+set("n", "<leader>cn", "<cmd>set relativenumber!<CR>", { desc = "Toogle Relative Numbers" })
+
 -- quit
 set("n", "<leader>qq", "<cmd>qa<cr>", { desc = "Quit all" })
+
+-- https://github.com/mhinz/vim-galore#saner-behavior-of-n-and-n
+set("n", "n", "'Nn'[v:searchforward].'zv'", { expr = true, desc = "Next Search Result" })
+set("x", "n", "'Nn'[v:searchforward]", { expr = true, desc = "Next Search Result" })
+set("o", "n", "'Nn'[v:searchforward]", { expr = true, desc = "Next Search Result" })
+set("n", "N", "'nN'[v:searchforward].'zv'", { expr = true, desc = "Prev Search Result" })
+set("x", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev Search Result" })
+set("o", "N", "'nN'[v:searchforward]", { expr = true, desc = "Prev Search Result" })
+
+-- toogle background dark/light
+local toogle_background = function()
+  if vim.o.background == "light" then
+    vim.o.background = "dark"
+  else
+    vim.o.background = "light"
+  end
+end
+
+set("n", "<leader>ub", toogle_background, { desc = "Toogle Backgrounf Color" })
+
+-- diagnostic
+local diagnostic_goto = function(next, severity)
+  local go = next and vim.diagnostic.goto_next or vim.diagnostic.goto_prev
+  severity = severity and vim.diagnostic.severity[severity] or nil
+  return function()
+    go { severity = severity }
+  end
+end
+set("n", "<leader>cD", vim.diagnostic.open_float, { desc = "Line Diagnostics" })
+set("n", "]d", diagnostic_goto(true), { desc = "Next Diagnostic" })
+set("n", "[d", diagnostic_goto(false), { desc = "Prev Diagnostic" })
+set("n", "]e", diagnostic_goto(true, "ERROR"), { desc = "Next Error" })
+set("n", "[e", diagnostic_goto(false, "ERROR"), { desc = "Prev Error" })
+set("n", "]w", diagnostic_goto(true, "WARN"), { desc = "Next Warning" })
+set("n", "[w", diagnostic_goto(false, "WARN"), { desc = "Prev Warning" })

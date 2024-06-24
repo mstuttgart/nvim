@@ -8,16 +8,14 @@ local plugin = {
   },
   event = "VeryLazy",
   keys = {
-    { "<leader>bc", function() require("mini.bufremove").delete(0, false) end, desc = "Close current buffer" },
+    { "<leader>bc", function() require("mini.bufremove").delete(0, false) end, desc = "Close current buffer" }, 
     { "<leader>bc", function() require("mini.bufremove").delete(0, true) end, desc = "Close current buffer (force)" },
     { "<leader>bD", "<Cmd>BufferLineGroupClose ungrouped<CR>", desc = "Close non-pinned buffers" },
     { "<leader>bo", "<Cmd>BufferLineCloseOthers<CR>", desc = "Close other buffers" },
     { "<leader>br", "<Cmd>BufferLineCloseRight<CR>", desc = "Close buffers to the right" },
     { "<leader>bl", "<Cmd>BufferLineCloseLeft<CR>", desc = "Close buffers to the left" },
-    { "<S-h>", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev Buffer" },
-    { "<S-l>", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer" },
-    { "[b", "<cmd>BufferLineCyclePrev<cr>", desc = "Prev Buffer" },
-    { "]b", "<cmd>BufferLineCycleNext<cr>", desc = "Next Buffer" },
+    { "<Tab>",      "<cmd>BufferLineCyclePrev<cr>",            desc = "Prev buffer" },
+    { "<S-Tab>",    "<cmd>BufferLineCycleNext<cr>",            desc = "Next buffer" },
   },
   opts = {
     options = {

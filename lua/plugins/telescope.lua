@@ -20,7 +20,7 @@ local plugins = {
     -- git
     { "<leader>gc", "<cmd>Telescope git_commits<CR>", desc = "commits" },
     { "<leader>gs", "<cmd>Telescope git_status<CR>", desc = "status" },
-    { "<leader>o", ":Telescope opener<cr>", desc = "status" },
+    { "<leader>o", ":Telescope opener<cr>", desc = "Open Folder" },
   },
   config = function()
     require("telescope").setup {

@@ -3,9 +3,6 @@
 
 local plugin = {
   "nvim-treesitter/nvim-treesitter",
-  dependencies = {
-    "pearofducks/ansible-vim",
-  },
   version = false, -- last release is way too old and doesn't work on Windows
   build = ":TSUpdate",
   event = { "BufReadPre", "BufNewFile" },
@@ -14,10 +11,36 @@ local plugin = {
     "TSUpdate",
     "TSInstall",
   },
+  opts = function(_, opts)
+    local function add(lang)
+      if type(opts.ensure_installed) == "table" then
+        table.insert(opts.ensure_installed, lang)
+      end
+    end
+
+    vim.filetype.add {
+      extension = { rasi = "rasi", rofi = "rasi", wofi = "rasi" },
+      filename = {
+        ["vifmrc"] = "vim",
+      },
+      pattern = {
+        [".*/waybar/config"] = "jsonc",
+        [".*/mako/config"] = "dosini",
+        [".*/kitty/.+%.conf"] = "bash",
+        [".*/.tmux.conf"] = "bash",
+        [".*/hypr/.+%.conf"] = "hyprlang",
+        ["%.env%.[%w_.-]+"] = "sh",
+      },
+    }
+
+    add "git_config"
+
+  end,
   config = function()
     require("nvim-treesitter.configs").setup {
       -- Add languages to be installed here that you want installed for treesitter
       ensure_installed = {
+        "astro",
         "bash",
         "c",
         "css",
@@ -33,9 +56,13 @@ local plugin = {
         "python",
         "query",
         "regex",
+        "rust",
+        "ron",
+        "ssh_config",
         "toml",
         "tsx",
         "typescript",
+        "vue",
         "xml",
         "yaml",
       },
@@ -54,20 +81,6 @@ local plugin = {
         config = {
           python = "# %s",
         },
-      },
-    }
-
-    vim.filetype.add {
-      filename = {
-        [".env"] = "dotenv",
-        ["vifmrc"] = "vim",
-      },
-      pattern = {
-        [".*/polybar/config"] = "dosini",
-        [".*/i3/config"] = "dosini",
-        [".*/kitty/.+%.conf"] = "bash",
-        [".*.tmux.+%.conf"] = "bash",
-        ["%.env%.[%w_.-]+"] = "dotenv",
       },
     }
   end,
