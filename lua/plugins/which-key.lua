@@ -13,7 +13,7 @@ local plugin = {
       ["<leader>b"] = { name = "+buffer" },
       ["<leader>c"] = { name = "+code" },
       ["<leader>d"] = { name = "+diagnostics/quickfix" },
-      ["<leader>e"] = { name = "+nvimtree" },
+      ["<leader>e"] = { name = "+explorer" },
       ["<leader>g"] = { name = "+git" },
       ["<leader>s"] = { name = "+search" },
       ["<leader>u"] = { name = "+ui" },
