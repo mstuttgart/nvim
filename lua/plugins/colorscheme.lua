@@ -21,16 +21,6 @@ local plugins = {
     end,
   },
   {
-    "ellisonleao/gruvbox.nvim",
-    name = "gruvbox",
-    lazy = true,
-    priority = 1000,
-    config = function()
-      -- vim.g.gruvbox_material_background = "hard"
-      vim.cmd.colorscheme "gruvbox"
-    end,
-  },
-  {
     "rose-pine/neovim",
     name = "rose-pine",
     lazy = true,
