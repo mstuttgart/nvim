@@ -21,65 +21,27 @@ local plugins = {
 
     vim.cmd [[highlight DiagnosticUnderlineError cterm=undercurl gui=undercurl guisp=undercurl]]
 
-    -- configure html server
-    lspconfig["html"].setup {
-      capabilities = capabilities,
+    -- list of servers configured with default config.
+    local servers = {
+      "html",
+      "cssls",
+      "pyright",
+      "bashls",
+      "ansiblels",
+      "lua_ls",
+      "lemminx",
+      "taplo",
+      "dockerls",
+      "docker_compose_language_service",
+      "vuels",
     }
 
-    -- configure typescript server with plugin
-    lspconfig["tsserver"].setup {
-      capabilities = capabilities,
-    }
-
-    -- configure css server
-    lspconfig["cssls"].setup {
-      capabilities = capabilities,
-    }
-
-    -- configure python server
-    lspconfig["pyright"].setup {
-      capabilities = capabilities,
-    }
-
-    -- configure bash server
-    lspconfig["bashls"].setup {
-      capabilities = capabilities,
-    }
-
-    -- configure ansible server
-    lspconfig["ansiblels"].setup {
-      capabilities = capabilities,
-    }
-
-    -- configure lua server
-    lspconfig["lua_ls"].setup {
-      capabilities = capabilities,
-    }
-
-    -- configure xml server
-    lspconfig["lemminx"].setup {
-      capabilities = capabilities,
-    }
-
-    lspconfig["taplo"].setup {
-      capabilities = capabilities,
-    }
-
-    lspconfig["dockerls"].setup {
-      capabilities = capabilities,
-    }
-
-    lspconfig["docker_compose_language_service"].setup {
-      capabilities = capabilities,
-    }
-
-    lspconfig["vuels"].setup {
-      capabilities = capabilities,
-    }
-
-    lspconfig["astro"].setup {
-      capabilities = capabilities,
-    }
+    -- lsps with default config
+    for _, lsp in ipairs(servers) do
+      lspconfig[lsp].setup {
+        capabilities = capabilities,
+      }
+    end
   end,
 }
 
