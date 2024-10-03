@@ -53,6 +53,7 @@ local plugins = {
         "stylua",
         "yamlfmt",
         "taplo",
+        "xmlformatter",
       },
 
       -- auto-install configured servers (with lspconfig)
