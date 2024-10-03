@@ -14,13 +14,11 @@ local plugins = {
       -- For major updates, this must be adjusted manually.
       version = "^1.0.0",
     },
-    "willthbill/opener.nvim",
   },
   keys = {
     -- git
     { "<leader>gc", "<cmd>Telescope git_commits<CR>", desc = "commits" },
     { "<leader>gs", "<cmd>Telescope git_status<CR>", desc = "status" },
-    { "<leader>o", ":Telescope opener<cr>", desc = "Open Folder" },
   },
   config = function()
     require("telescope").setup {
@@ -41,7 +39,6 @@ local plugins = {
 
     require("telescope").load_extension "fzf"
     require("telescope").load_extension "live_grep_args"
-    require("telescope").load_extension "opener"
   end,
   init = function()
     vim.keymap.set("n", "<leader>sf", require("telescope.builtin").find_files, { desc = "Search Files" })
