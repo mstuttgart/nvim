@@ -9,14 +9,16 @@ local plugin = {
   opts = {
     plugins = { spelling = true },
     defaults = {
-      mode = { "n", "v" },
-      ["<leader>b"] = { name = "+buffer" },
-      ["<leader>c"] = { name = "+code" },
-      ["<leader>d"] = { name = "+diagnostics/quickfix" },
-      ["<leader>e"] = { name = "+explorer" },
-      ["<leader>g"] = { name = "+git" },
-      ["<leader>s"] = { name = "+search" },
-      ["<leader>u"] = { name = "+ui" },
+      {
+        mode = { "n", "v" },
+        { "<leader>b", group = "buffer" },
+        { "<leader>c", group = "code" },
+        { "<leader>d", group = "diagnostics/quickfix" },
+        { "<leader>e", group = "explorer" },
+        { "<leader>g", group = "git" },
+        { "<leader>s", group = "search" },
+        { "<leader>u", group = "ui" },
+      },
     },
   },
   config = function(_, opts)
