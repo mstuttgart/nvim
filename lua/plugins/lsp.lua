@@ -1,9 +1,11 @@
 -- configure LSP
 
-local plugins = {
+local plugin = {
   "neovim/nvim-lspconfig",
-  opts = function(_, opts)
-    vim.list_extend(opts.servers, {
+  ---@class PluginLspOpts
+  opts = {
+    ---@type lspconfig.options
+    servers = {
       "html",
       "cssls",
       "pyright",
@@ -15,8 +17,8 @@ local plugins = {
       "dockerls",
       "docker_compose_language_service",
       "vuels",
-    })
-  end,
+    },
+  },
 }
 
-return plugins
+return plugin

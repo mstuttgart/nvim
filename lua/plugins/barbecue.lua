@@ -3,9 +3,11 @@ local plugin = {
   version = "*",
   dependencies = {
     "SmiteshP/nvim-navic",
-    "nvim-tree/nvim-web-devicons",
+    -- "nvim-tree/nvim-web-devicons",
   },
-  config = true,
+  config = function()
+    require("barbecue").setup()
+  end,
 }
 
-return plugin
+return {}

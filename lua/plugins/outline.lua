@@ -1,12 +1,21 @@
 local plugin = {
   "hedyhli/outline.nvim",
-  lazy = true,
-  cmd = { "Outline", "OutlineOpen" },
-  keys = {
-    { "<leader>ct", "<cmd>Outline<CR>", desc = "Toggle outline" },
-  },
+  opts = function(_, opts)
+    opts.providers = {
+      priority = { "lsp", "coc", "markdown", "norg" },
+      -- Configuration for each provider (3rd party providers are supported)
+      lsp = {
+        -- Lsp client names to ignore
+        blacklist_clients = {},
+      },
+      markdown = {
+        -- List of supported ft's to use the markdown provider
+        filetypes = { "markdown" },
+      },
+    }
+  end,
   config = function()
-    require("outline").setup()
+    require("outline").setup({})
   end,
 }
 
