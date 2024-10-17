@@ -6,6 +6,7 @@ local plugin = {
       bash = { "shfmt" },
       css = { "prettier" },
       html = { "prettier" },
+      j2 = { "djlint" },
       javascript = { "prettier" },
       json = { "prettier" },
       lua = { "stylua" },

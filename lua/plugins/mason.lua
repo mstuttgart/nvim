@@ -12,6 +12,8 @@ local plugins = {
       "docker-compose-language-service",
       "dockerfile-language-server",
       "html-lsp",
+      "jinja-lsp",
+      "json-lsp",
       "lemminx",
       "lua-language-server",
       "marksman",
@@ -33,6 +35,7 @@ local plugins = {
 
       -- formatters
       "black",
+      "djlint",
       "isort",
       "prettier",
       "shfmt",
