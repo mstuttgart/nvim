@@ -40,17 +40,6 @@ local plugins = {
     },
   },
 
-  -- configure breadcubs
-  -- {
-  --   "utilyre/barbecue.nvim",
-  --   version = "*",
-  --   dependencies = {
-  --     "SmiteshP/nvim-navic",
-  --     "nvim-tree/nvim-web-devicons",
-  --   },
-  --   config = true,
-  -- },
-
   -- disable trouble
   { "catppuccin/nvim", enabled = false },
   { "folke/tokyonight.nvim", enabled = false },
