@@ -6,6 +6,15 @@ local plugin = {
       indent_marker = "┆",
       last_indent_marker = "└",
     }
+
+    opts.filesystem.filtered_items = {
+      hide_dotfiles = false,
+      hide_gitignored = false,
+      hide_hidden = false,
+      hide_by_name = {
+        "__pycache__",
+      },
+    }
   end,
 }
 
