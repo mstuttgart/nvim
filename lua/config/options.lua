@@ -1,7 +1,7 @@
 -- [[ Setting options ]]
 -- See `:help vim.o`
 
-local opt = vim.opt
+local opt = vim.o
 
 -- line numbers
 opt.relativenumber = false -- show relative line numbers
