@@ -41,3 +41,9 @@ local toogle_background = function()
 end
 
 set("n", "<leader>ub", toogle_background, { desc = "Toogle Backgrounf Color" })
+
+-- navegate in insert <ctrl> hjkl keys
+set("i", "<C-h>", "<Left>", { desc = "Move left" })
+set("i", "<C-j>", "<Down>", { desc = "Move down" })
+set("i", "<C-k>", "<Up>", { desc = "Move up" })
+set("i", "<C-l>", "<Right>", { desc = "Move right" })
