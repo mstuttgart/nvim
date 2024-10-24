@@ -18,6 +18,7 @@ local plugins = {
       "lua-language-server",
       "marksman",
       "pyright",
+      "rust-analyzer",
       "taplo",
       "typescript-language-server",
       "vue-language-server",

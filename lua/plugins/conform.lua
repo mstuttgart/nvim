@@ -12,6 +12,7 @@ local plugin = {
       lua = { "stylua" },
       markdown = { "prettier" },
       python = { "isort", "black" },
+      rust = { "rust-analyzer" },
       toml = { "taplo" },
       typescript = { "prettier" },
       vue = { "prettier" },
