@@ -7,6 +7,10 @@ local plugin = {
       last_indent_marker = "└",
     }
 
+    opts.window = {
+      auto_expand_width = true,
+    }
+
     opts.filesystem.filtered_items = {
       hide_dotfiles = false,
       hide_gitignored = false,
