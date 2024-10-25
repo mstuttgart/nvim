@@ -22,4 +22,4 @@ local plugin = {
   end,
 }
 
-return plugin
+return {}

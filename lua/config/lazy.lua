@@ -21,26 +21,6 @@ require("lazy").setup({
       "LazyVim/LazyVim",
       opts = {
         colorscheme = "ayu",
-        kind_filter = {
-          default = {
-            "Class",
-            "Constant", -- add this
-            "Constructor",
-            "Enum",
-            "Field",
-            "Function",
-            "Interface",
-            "Method",
-            "Module",
-            "Namespace",
-            "Package",
-            "Property",
-            "Struct",
-            "Trait",
-            "Fields",
-            -- "Variable", -- add this
-          },
-        },
       },
       import = "lazyvim.plugins",
     },
@@ -49,7 +29,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.coding.luasnip" },
     { import = "lazyvim.plugins.extras.coding.mini-surround" },
     { import = "lazyvim.plugins.extras.editor.illuminate" },
-    { import = "lazyvim.plugins.extras.editor.aerial" },
+    { import = "lazyvim.plugins.extras.editor.outline" },
     { import = "lazyvim.plugins.extras.util.dot" },
     { import = "lazyvim.plugins.extras.ui.mini-indentscope" },
     { import = "lazyvim.plugins.extras.editor.navic" },
