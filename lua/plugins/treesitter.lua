@@ -16,6 +16,7 @@ local plugin = {
         "gitignore",
         "html",
         "javascript",
+        "just",
         "json",
         "lua",
         "markdown_inline",
